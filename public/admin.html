@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Portfolio</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>Administration du portfolio</h1>
+        <a href="index.html">Retour au portfolio</a>
+    </header>
+
+    <main>
+
+<section>
+    <h2>Ajouter un nouveau projet</h2>
+
+    <form id="project-form">
+        <div>
+            <label for="titre">Titre du projet</label>
+            <input type="text" id="titre" required>
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" required></textarea>
+        </div>
+
+        <div>
+            <label for="categorie">Catégorie</label>
+            <select id="categorie">
+                <option value="html">HTML / CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="backend">Backend</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="statut">Statut</label>
+            <select id="statut">
+                <option value="en cours">En cours</option>
+                <option value="termine">Terminé</option>
+            </select>
+        </div>
+
+        <button type="submit">Ajouter le projet</button>
+    </form>
+</section>
+
+
+<section>
+    <h2>Gérer les projets</h2>
+    <input
+    type="search"
+    id="search-projects"
+    placeholder="🔎 Rechercher un projet..."
+>
+    <div id="projects-container">
+        Chargement des projets...
+    </div>
+</section>
+
+
+
+        <section>
+            <h2>Messages reçus</h2>
+            <p>Voici les messages envoyés depuis le formulaire de contact.</p>
+
+            <input
+    type="search"
+    id="search-messages"
+    placeholder="🔎 Rechercher un message..."
+>
+
+            <div id="messages-container">
+                Chargement des messages...
+            </div>
+        </section>
+    </main>
+
+
+<section class="dashboard-stats">
+    <div class="stat-card">
+        <span>📁</span>
+        <h3>Projets</h3>
+        <p id="total-projects">0</p>
+    </div>
+
+    <div class="stat-card">
+        <span>✉️</span>
+        <h3>Messages reçus</h3>
+        <p id="total-messages">0</p>
+    </div>
+</section>
+
+    <div id="notification" class="notification"></div>
+
+<div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+        <h2>Confirmer la suppression</h2>
+        <p id="confirmation-text">
+            Voulez-vous vraiment supprimer cet élément ?
+        </p>
+
+        <div class="modal-actions">
+            <button id="cancel-delete" type="button">Annuler</button>
+            <button id="confirm-delete" type="button">Supprimer</button>
+        </div>
+    </div>
+</div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

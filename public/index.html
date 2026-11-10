@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Patrick – Développeur front-end</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <nav>
+          <a class="logo" href="#accueil">Patrick</a>
+          <div class="links">
+            <a class="hide-sm" href="#apropos">À propos</a>
+            <a class="hide-sm" href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+            <button id="theme" aria-label="Changer de thème">🌓</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="accueil">
+        <span class="tag">Développeur front-end</span>
+        <h1>
+          Salut, je suis Patrick.<br />Je construis des interfaces web claires
+          et accessibles.
+        </h1>
+        <p class="lead">
+          En formation front-end, je transforme des idées en pages rapides,
+          responsives et agréables à utiliser.
+        </p>
+        <div class="btns">
+          <a class="btn primary" href="#projets">Voir mes projets</a>
+          <a class="btn ghost" href="#contact">Me contacter</a>
+        </div>
+      </section>
+
+      <section id="apropos" class="reveal">
+        <h2>À propos</h2>
+        <p class="lead">
+          Je me forme au développement web avec l’objectif de trouver un poste
+          dans le front-end. J’apprends en mêlant théorie et pratique : chaque
+          notion est suivie d’un petit projet pour la mettre en œuvre.
+        </p>
+      </section>
+
+      <section id="competences" class="reveal">
+        <h2>Compétences</h2>
+        <ul class="skills" id="skills-list"></ul>
+        <div id="bars">
+          <div class="bar">
+            <span>HTML<em>90%</em></span
+            ><i><b data-w="90"></b></i>
+          </div>
+          <div class="bar">
+            <span>CSS<em>80%</em></span
+            ><i><b data-w="80"></b></i>
+          </div>
+          <div class="bar">
+            <span>JavaScript<em>65%</em></span
+            ><i><b data-w="65"></b></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="reveal">
+        <h2>Projets</h2>
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="on" data-f="all">Tous</button>
+          <button data-f="html">HTML/CSS</button>
+          <button data-f="js">JavaScript</button>
+        </div>
+        <div class="grid" id="projects-grid"></div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <h2>Contact</h2>
+        <form id="form" novalidate>
+          <label>Nom<input id="nom" required autocomplete="name" /></label>
+          <label
+            >E-mail<input id="mail" type="email" required autocomplete="email"
+          /></label>
+          <label>Message<textarea id="txt" rows="4" required></textarea></label>
+          <button class="btn primary" type="submit">Envoyer</button>
+          <div id="msg" role="status"></div>
+        </form>
+      </section>
+    </main>
+    <div id="notification" class="notification"></div>
+
+    <footer>
+      © <span id="year"></span> Patrick – Fait avec HTML, CSS et JavaScript
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
