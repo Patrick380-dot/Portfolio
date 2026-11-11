@@ -279,6 +279,7 @@ h2 {
 }
 
 form {
+  min-width: 100%;
   display: grid;
   gap: 14px;
   max-width: 520px
