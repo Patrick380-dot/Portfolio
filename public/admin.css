@@ -155,8 +155,6 @@ article button:last-child:hover {
 }
 
 .dashboard-stats {
-    margin-inline-start: 12%;
-    margin-inline-end: 12%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
